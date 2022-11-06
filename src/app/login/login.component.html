@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <form [formGroup]="loginForm" class="card">
+        <img  src="../../assets/images/logo-social.webp" width="200" height="200">
+        <div class="card-body">
+              <div class="mb-3">
+                <input type="email" formControlName="userName" class="form-control" id="userName" placeholder="اسم المستخدم او البريد الالكتروني">
+              </div>
+              <div class="mb-3">
+                <input type="password" formControlName="password" class="form-control" id="password"  placeholder="كلمة المرور">
+                <div *ngIf="f['password'].touched && f['password'].invalid" class="text-danger">
+                  <div class="text-danger" *ngIf="f['password'].errors && f['password'].errors['required']">كلمة
+                      المرور مطلوبة </div>
+              </div>
+              </div>
+<button class="btn btn-primary"  [disabled]="!loginForm.valid" (click)="login()">تسجيل الدخول</button>
+            </div>
+          </form>
+
+    </div>
+  </div>
+    </div>
+
+
+    <form ></form>
